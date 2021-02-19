@@ -112,9 +112,8 @@ export default function NgayChieuComponent(props) {
       listDayTime = lstLichChieuTheoPhimSorted;
       return listRender;
     } else {
-      console.log("false nè");
       let listRender = [];
-      for (let i = 0; i <= 7; i++) {
+      for (let i = 0; i <= 5; i++) {
         listRender.push(
           <li className="dayTimeItem text-center" key={i}>
             {/* <p style={{ fontSize: "18px", fontWeight: "600" }}></p> */}

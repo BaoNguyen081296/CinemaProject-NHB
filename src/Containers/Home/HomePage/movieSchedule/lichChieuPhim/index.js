@@ -23,6 +23,7 @@ class LichChieuPhimComponent extends Component {
 
     if (lichChieuTheoHTR && lichChieuTheoHTR !== null && maCumRap !== null) {
       movieList = lichChieuTheoHTR[0].lstCumRap;
+      // console.log("movie list", movieList);
       return movieList.map((item) => {
         return item.maCumRap === maCumRap ? item.danhSachPhim : null;
       });
@@ -35,7 +36,7 @@ class LichChieuPhimComponent extends Component {
       let lastMovieList = movieList.filter((item) => {
         return item !== null;
       });
-
+      console.log(lastMovieList);
       // dayjs(item.ngayChieuGioChieu).format("DD/MM/YYYY") === now
 
       if (lastMovieList[0] && lastMovieList[0] !== null) {
