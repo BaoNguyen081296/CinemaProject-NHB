@@ -18,9 +18,7 @@ export default function NgayChieuComponent(props) {
   }, [dispatch, movie]);
 
   const renderDayName = (i, minDate) => {
-    if (i === 0) return "Hôm nay";
-    else if (i === 1) return "Ngày Mai";
-    else return `${dayjs(minDate).add(i, "day").format("DD/MM")}`;
+    return `${dayjs(minDate).add(i, "day").format("DD/MM")}`;
   };
 
   //hàm update CurrentDay
