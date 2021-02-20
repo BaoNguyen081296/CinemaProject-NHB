@@ -36,7 +36,7 @@ class LichChieuPhimComponent extends Component {
       let lastMovieList = movieList.filter((item) => {
         return item !== null;
       });
-      console.log(lastMovieList);
+      // console.log(lastMovieList);
       // dayjs(item.ngayChieuGioChieu).format("DD/MM/YYYY") === now
 
       if (lastMovieList[0] && lastMovieList[0] !== null) {

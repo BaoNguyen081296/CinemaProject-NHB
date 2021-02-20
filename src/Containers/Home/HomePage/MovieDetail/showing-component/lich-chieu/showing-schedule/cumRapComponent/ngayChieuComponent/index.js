@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 export default function NgayChieuComponent(props) {
   const dayjs = require("dayjs");
   let nowDay = dayjs();
-  // console.log("nowDay.format()", nowDay.format());
   const movie = props.movie;
   const dispatch = useDispatch();
   let currentDay = useSelector(

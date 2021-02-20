@@ -57,17 +57,18 @@ class MovieItem extends Component {
   renderListSuatChieu = () => {
     const { movie } = this.props;
     const { lstLichChieuTheoPhim } = movie;
-
+    // console.log(movie);
     let date = dayjs().format("DD/MM/YYYY");
     let time = dayjs().format("HH:mm");
     const lstLichChieuTheoPhimSorted = lstLichChieuTheoPhim.sort((a, b) =>
       dayjs(a.ngayChieuGioChieu).diff(dayjs(b.ngayChieuGioChieu))
     );
+    // console.log("lstLichChieuTheoPhimSorted: ", lstLichChieuTheoPhimSorted);
     return lstLichChieuTheoPhimSorted.map((item) => {
       if (
         dayjs(item.ngayChieuGioChieu).format("DD/MM/YYYY") === date &&
         time < dayjs(item.ngayChieuGioChieu).format("HH:mm")
-      )
+      ) {
         return (
           <Button
             // disabled={time > dayjs(item.ngayChieuGioChieu).format("HH:mm")}
@@ -85,6 +86,7 @@ class MovieItem extends Component {
             </small>
           </Button>
         );
+      }
       return null;
     });
   };
