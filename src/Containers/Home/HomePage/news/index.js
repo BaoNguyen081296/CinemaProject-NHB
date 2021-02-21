@@ -28,9 +28,17 @@ export default function News() {
                   và đổi quà hấp dẫn.
                 </p>
                 <br />
-                <button className="buttonLeft">
+                {/* <button className="buttonLeft">
                   App miễn phí - Tải về ngay!
-                </button>
+                </button> */}
+                <a
+                  className="buttonLeft"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://apps.apple.com/us/app/123phim-mua-ve-lien-tay-chon/id615186197"
+                >
+                  App miễn phí - Tải về ngay!
+                </a>
                 <p className="textAppUnder">
                   TIX có hai phiên bản
                   <a
