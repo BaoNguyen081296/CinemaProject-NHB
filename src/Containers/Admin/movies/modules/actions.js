@@ -75,6 +75,7 @@ export const actPostNewMovie = (movie) => {
         Swal.fire({
           icon: "success",
           title: "Thêm phim mới thành công!",
+          showConfirmButton: true,
         }).then((rs) => {
           window.location.reload();
         });
@@ -111,6 +112,7 @@ export const actUpdateMovie = (movie) => {
         });
       })
       .catch((err) => {
+        console.log(err);
         Swal.fire({
           icon: "error",
           title: "Cập nhật phim thất bại!",

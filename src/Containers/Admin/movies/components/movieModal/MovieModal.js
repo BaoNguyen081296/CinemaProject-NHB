@@ -179,11 +179,10 @@ function MovieModal(props) {
                 margin="normal"
                 error={!!errors.ngayKhoiChieu && touched.ngayKhoiChieu}
               >
-                <InputLabel>ngày khởi chiếu</InputLabel>
+                {/* <InputLabel>ngày khởi chiếu</InputLabel> */}
+                <small className="d-block mt-3">Ngày khởi chiếu</small>
                 <Field name="ngayKhoiChieu">
-                  {({ field }) => (
-                    <Input fullWidth placeholder="dd/MM/yyyy" {...field} />
-                  )}
+                  {({ field }) => <Input type="date" fullWidth {...field} />}
                 </Field>
                 {touched.ngayKhoiChieu && (
                   <FormHelperText>{errors.ngayKhoiChieu}</FormHelperText>
@@ -203,7 +202,7 @@ function MovieModal(props) {
                   <FormHelperText>{errors.trailer}</FormHelperText>
                 )}
               </FormControl>
-              <small className="d-block">Hình ảnh</small>
+              <small className="d-block mt-3">Hình ảnh</small>
               <Input
                 style={{ width: "48%" }}
                 name="hinhAnh"
