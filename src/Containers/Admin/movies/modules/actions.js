@@ -71,7 +71,6 @@ export const actPostNewMovie = (movie) => {
       },
     })
       .then((res) => {
-        // dispatch(actPostNewMovieSuccess(res.data));
         Swal.fire({
           icon: "success",
           title: "Thêm phim mới thành công!",
@@ -81,7 +80,6 @@ export const actPostNewMovie = (movie) => {
         });
       })
       .catch((err) => {
-        // dispatch(actPostNewMovieFail(err.message));
         Swal.fire({
           icon: "error",
           title: "Thêm phim mới thất bại!",
@@ -168,7 +166,6 @@ export const actDeleteMovie = (movieID) => {
       },
     })
       .then((res) => {
-        // dispatch(actPostNewMovieSuccess(res.data));
         Swal.fire({
           icon: "success",
           title: "Xóa phim thành công!",
