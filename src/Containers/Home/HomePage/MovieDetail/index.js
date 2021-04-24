@@ -45,7 +45,6 @@ class MovieDetailComponent extends Component {
   componentDidMount() {
     this.props.actGetMovieDetail(this.props.match.params.id);
   }
-
   //hàm ramdom từ 1-10 => dùng để random số người đánh giá
   randomNumber() {
     return Math.round(Math.random() * (10 - 1) + 1);
